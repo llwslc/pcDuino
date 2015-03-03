@@ -1,0 +1,54 @@
+tzselect 选择时区 TZ='Asia/Shanghai'; export TZ
+sudo cp /usr/share/zoneinfo/Asia/ShangHai /etc/localtime
+
+date -R 当前时间
+sudo ntpdate time.scau.edu.cn
+sudo hwclock --systohc
+
+
+rm -rf 删除目录
+pwd 显示当前的路径
+
+ps -x 正在运行的程序
+
+chmod 777  修改权限
+
+ibus-setup  ibus设置
+
+sudo cp /home/ubuntu/Downloads/sources.list /etc/apt/sources.list
+
+sudo apt-get install packagename -d 只下载不安装(含依赖库)
+sudo apt-get update
+sudo apt-get clean
+sudo apt-get purge 卸载包括配置文件
+
+sudo rm -rf /var/lib/apt/lists
+
+sudo apt-cache search
+
+/var/cache/apt/archives
+/var/cache/apt/archives/partial
+
+sudo dpkg --get-selections 获取所有安装程序
+sudo dpkg -i .deb 安装.deb文件
+
+设置vnc密码
+x11vnc - stoppasswd
+sudo cp /home/ubuntu/.vnc/passwd /etc/x11vnc.pass
+分辨率
+sudo cp  xorg.conf /etc/X11/xorg.conf 
+
+
+http://www.tightvnc.com/ tightvnc
+apt-get install tightvncserver
+vncpasswd  设置密码
+
+http://www.ijg.org/  --jpegsrc
+http://www.zlib.net/ --zlib
+
+wget http://www.zlib.net/zlib-1.2.3.tar.gz
+tar -xvzf zlib-1.2.3.tar.gz
+cd zlib-1.2.3.tar.gz
+./configure
+make
+sudo make install
